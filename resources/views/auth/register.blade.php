@@ -5,34 +5,34 @@
         <div class="col-md-5 ml-auto">
             <div class="info-area info-horizontal mt-5">
                 <div class="icon icon-warning">
-                    <i class="tim-icons icon-wifi"></i>
+                    <i class="tim-icons icon-sound-wave"></i>
                 </div>
                 <div class="description">
-                    <h3 class="info-title">{{ _('Marketing') }}</h3>
+                    <h3 class="info-title">{{ _('Studios') }}</h3>
                     <p class="description">
-                        {{ _('We\'ve created the marketing campaign of the website. It was a very interesting collaboration.') }}
+                        {{ _('Designed to help studios connect with artists, and with each other.') }}
                     </p>
                 </div>
             </div>
             <div class="info-area info-horizontal">
                 <div class="icon icon-primary">
-                    <i class="tim-icons icon-triangle-right-17"></i>
+                    <i class="tim-icons icon-single-02"></i>
                 </div>
                 <div class="description">
-                    <h3 class="info-title">{{ _('Fully Coded in HTML5') }}</h3>
+                    <h3 class="info-title">{{ _('Artists') }}</h3>
                     <p class="description">
-                        {{ _('We\'ve developed the website with HTML5 and CSS3. The client has access to the code using GitHub.') }}
+                        {{ _('With the creative in mind, working together or with studios to get your content to the world.') }}
                     </p>
                 </div>
             </div>
             <div class="info-area info-horizontal">
                 <div class="icon icon-info">
-                    <i class="tim-icons icon-trophy"></i>
+                    <i class="tim-icons icon-headphones"></i>
                 </div>
                 <div class="description">
-                    <h3 class="info-title">{{ _('Built Audience') }}</h3>
+                    <h3 class="info-title">{{ _('Content Providers') }}</h3>
                     <p class="description">
-                        {{ _('There is also a Fully Customizable CMS Admin Dashboard for this product.') }}
+                        {{ _('Connecting to industry leading content providers to make the process seamless.') }}
                     </p>
                 </div>
             </div>

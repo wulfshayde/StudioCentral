@@ -17,34 +17,32 @@
         </button>
         <div class="collapse navbar-collapse" id="navigation">
             <ul class="navbar-nav ml-auto">
-                <li class="search-bar input-group">
+                {{-- <li class="search-bar input-group">
                     <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split"></i>
                         <span class="d-lg-none d-md-block">{{ __('Search') }}</span>
                     </button>
-                </li>
+                </li> --}}
                 <li class="dropdown nav-item">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                      @if(Auth::user()->notifications->count() > 0)
                         <div class="notification d-none d-lg-block d-xl-block"></div>
-                        <i class="tim-icons icon-sound-wave"></i>
+                      @endif
+                        <i class="tim-icons icon-bulb-63"></i>
                         <p class="d-lg-none"> {{ __('Notifications') }} </p>
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
-                        <li class="nav-link">
-                            <a href="#" class="nav-item dropdown-item">{{ __('Mike John responded to your email') }}</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#" class="nav-item dropdown-item">{{ __('You have 5 more tasks') }}</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#" class="nav-item dropdown-item">{{ __('Your friend Michael is in town') }}</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#" class="nav-item dropdown-item">{{ __('Another notification') }}</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#" class="nav-item dropdown-item">{{ __('Another one') }}</a>
-                        </li>
-                    </ul>
+                      <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
+                        @if(Auth::user()->notifications->count() > 0)
+                          @foreach(Auth::user()->notifications as $notification)
+                            <li class="nav-link">
+                              <a href="{{ url($notification->action) }}" class="nav-item dropdown-item">{{ __($notification->notification) }}</a>
+                            </li>
+                          @endforeach
+                        @else
+                          <li class="nav-link">
+                            <a href="#" class="nav-item dropdown-item">{{ __('You have no notifications') }}</a>
+                          </li>
+                        @endif
+                      </ul>
                 </li>
                 <li class="dropdown nav-item">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
